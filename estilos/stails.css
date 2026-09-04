@@ -1,0 +1,47 @@
+body {
+    background-color: grey;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+span {
+    color: blue;
+}
+
+.precio {
+    color: yellow;
+}
+
+.resumen {
+    background-color: black;
+}
+
+.aviso {
+    color: #ff4757;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+/* Estilo para los botones de eliminar */
+.btn-eliminar {
+    background-color: #c0392b;
+    color: white;
+}
