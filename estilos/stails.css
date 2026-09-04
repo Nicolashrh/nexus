@@ -1,47 +1,127 @@
-body {
-    background-color: grey;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
+/* Normalización de caja */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-h1 {
-    color: red;
+/* 1. CELULARES (Menos de 600px - por defecto) */
+.contenedor-redes {
+  display: flex;
+  flex-direction: column;   /* Uno debajo del otro */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 12px;
 }
 
-h2 {
-    color: orange;
+.tarjeta-red {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #1e1e24; /* Color de fondo de la tarjeta */
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  width: 100%;              /* Ocupa todo el ancho en móviles */
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-h3 {
-    color: white;
+.tarjeta-red:hover {
+  background-color: #2b2b36;
+  transform: translateY(-2px);
 }
 
-p {
-    color: white;
+.icono-social {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;           /* Evita que el logo se deforme */
 }
 
-span {
-    color: blue;
+/* 2. TABLETS (Pantallas entre 600px y 1023px) */
+@media (min-width: 600px) {
+  .contenedor-redes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas simétricas */
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .tarjeta-red {
+    font-size: 1rem;
+    padding: 14px 18px;
+  }
+
+  .icono-social {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.precio {
-    color: yellow;
+/* 3. COMPUTADORA / ESCRITORIO (Pantallas de 1024px o más) */
+@media (min-width: 1024px) {
+  .contenedor-redes {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Distribución automática */
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .tarjeta-red {
+    font-size: 1.1rem;
+    padding: 16px 20px;
+  }
+
+  .icono-social {
+    width: 28px;
+    height: 28px;
+  }
+}
+/* Centra los textos y el contenedor en la pantalla */
+.contenedor-principal {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  text-align: center; /* Centra el título y la descripción */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el bloque de redes horizontalmente */
 }
 
-.resumen {
-    background-color: black;
+/* Centra las tarjetas y limita su tamaño */
+.contenedor-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px; /* Evita que las tarjetas se estiren de más en pantallas grandes */
 }
 
-.aviso {
-    color: #ff4757;
-    font-size: 1.2rem;
-    font-weight: bold;
-    min-height: 25px;
+/* Centra el contenido interior de cada botón/tarjeta */
+.tarjeta-red {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el icono y el texto dentro de la tarjeta */
+  gap: 16px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px 24px;
+  width: 100%;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* Estilo para los botones de eliminar */
-.btn-eliminar {
-    background-color: #c0392b;
-    color: white;
+.tarjeta-red:hover {
+  transform: translateY(-2px);
+  border-color: #38bdf8;
+}
+
+/* Alinea el texto interno al centro */
+.info-red {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Deja el nombre alineado respecto a la arroba */
+  gap: 2px;
 }
