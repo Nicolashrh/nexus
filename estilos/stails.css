@@ -64,7 +64,7 @@ body {
 
 @media (min-width: 1024px) {
   .contenedor-redes {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Distribución automática */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
     padding: 32px;
   }
