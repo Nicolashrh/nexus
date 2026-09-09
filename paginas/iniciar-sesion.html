@@ -1,66 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Iniciar sesion</title>
-</head>
-<body>
- <p> Aqui pudes iniciar sesion</p>
-   <a href="registro_usuario.html">Registro de usuario</a>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/style.css">
-    <title>Iniciar Sesion</title>
-</head>
-<body>
-    <header class="barra">
-        <div class="logo">
-            <a href="/Projecto/index.html">
-            <img src="../images/485fd336a1eb9e94a72ed950af6c1793.webp" alt="Logo de la empresa" class="logo-img">
-            </a>
-        </div>
-        <nav class="link-nav">
-        </nav>
-        <div class="usuario"></div>
-    </header>
-    <main class="login-con">
-        <section class="login-tarjeta">
-            <h2>Iniciar Sesion</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../estilos/stails.css" />
+        <title>Iniciar Sesion</title>
+    </head>
+    <body>
+        <header class="barra">
+            <div class="logo">
+                <a href="../index.html">
+                    <img
+                        src="../imagenes/485fd336a1eb9e94a72ed950af6c1793.webp"
+                        alt="Logo de la empresa"
+                        class="logo-img"
+                    />
+                </a>
+            </div>
+            <nav class="link-nav"></nav>
+            <div class="usuario"></div>
+        </header>
+        <main class="login-con">
+            <section class="login-tarjeta">
+                <h2>Iniciar Sesion</h2>
 
-            <form class="login-form" id = "formularioLogin" onsubmit="iniciarSesion(); return false">
-                <div class="campo-grupo">
-                    <label for="usuario-ingreso">Usuario o Correo</label>
-                    <input type="text" id="usuario-ingreso" placeholder="Ingresa tu usuario o correo" required>
+                <form
+                    class="login-form"
+                    id="formularioLogin"
+                    onsubmit="
+                        iniciarSesion();
+                        return false;
+                    "
+                >
+                    <div class="campo-grupo">
+                        <label for="usuario-ingreso">Usuario o Correo</label>
+                        <input
+                            type="text"
+                            id="usuario-ingreso"
+                            placeholder="Ingresa tu usuario o correo"
+                            required
+                        />
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="contrasena-ingreso">Contraseña</label>
+                        <input
+                            type="password"
+                            id="contrasena-ingreso"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        />
+                    </div>
+
+                    <button type="submit" class="boton-ingreso">
+                        Iniciar sesion
+                    </button>
+                </form>
+
+                <div class="registro-link">
+                    <p>
+                        ¿No tienes una cuenta?
+                        <a href="registro_usuario.html">Registrate</a>
+                    </p>
                 </div>
+            </section>
+        </main>
 
-                <div class="campo-grupo">
-                    <label for="contrasena-ingreso">Contraseña</label>
-                    <input type="password" id="contrasena-ingreso" placeholder="Ingresa tu contraseña" required>
+        <script src="../scripts/scripts.js"></script>
+
+        <footer>
+            <div class="footer-con">
+                <p>
+                    Todos los derechos reservados pertenecen a Nexus.com y
+                    Nexus.cl
+                </p>
+                <div class="footer-links">
+                    <a href="nosotros.html">Nosotros</a>
                 </div>
-
-                <button type="submit" class="boton-ingreso">Iniciar sesion</button>
-            </form>
-
-            <div class="registro-link">
-                <p>¿No tienes una cuenta? <a href="/Projecto/paginas/registro_usuario.html">Registrate</a></p>
-        </section>
-    </main>
-</body>
-
-<script src="../scripts/scripts.js"></script>
-
-<footer>
-    <div class="footer-con">
-        <p>Todos los derechos reservados pertenecen a Nexus.com y Nexus.cl</p>
-        <div class="footer-links">
-            <a href="/Projecto/paginas/nosotros.html">Nosotros</a>
-        </div>
-    </div>
-</footer>
+            </div>
+        </footer>
+    </body>
 </html>
